@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="e87381fe-d4b6-4ea9-ae8b-476acaf82b31"
+                    activeEnvironment="Default"
+                    name="ApiADv1000"
+                    resourceRoot=""
+                    soapui-version="5.5.0"
+                    xmlns:con="http://eviware.com/soapui/config">
+	<con:settings/>
+	<con:interface xsi:type="con:RestService"
+	               id="501dabec-3986-4d7a-911b-7e2a2e76d3b8"
+	               wadlVersion="http://wadl.dev.java.net/2009/02"
+	               name="http://127.0.0.1"
+	               type="rest"
+	               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+		<con:settings/>
+		<con:definitionCache type="TEXT"
+		                     rootPart=""/>
+		<con:endpoints>
+			<con:endpoint>http://127.0.0.1</con:endpoint>
+		</con:endpoints>
+		<con:resource name=""
+		              path="/ad/getApid"
+		              id="ed39563a-03e2-487a-91e6-36016bf1998e">
+			<con:settings/>
+			<con:parameters/>
+			<con:method name="Method 1"
+			            id="f8d3476f-c417-4d4f-94a7-c60a1ccc8b0a"
+			            method="POST">
+				<con:settings/>
+				<con:parameters/>
+				<con:representation type="RESPONSE">
+					<con:mediaType xsi:nil="true"/>
+					<con:status>0</con:status>
+					<con:params/>
+					<con:element>data</con:element>
+				</con:representation>
+				<con:representation type="RESPONSE">
+					<con:mediaType>application/json</con:mediaType>
+					<con:status>200</con:status>
+					<con:params/>
+					<con:element xmlns:def="http://127.0.0.1/default">def:Response</con:element>
+				</con:representation>
+				<con:representation type="FAULT">
+					<con:mediaType>application/json</con:mediaType>
+					<con:status>400 422</con:status>
+					<con:params/>
+					<con:element xmlns:get="http://127.0.0.1/ad/getApid">get:Fault</con:element>
+				</con:representation>
+				<con:representation type="REQUEST">
+					<con:mediaType>application/json</con:mediaType>
+					<con:params/>
+				</con:representation>
+				<con:representation type="RESPONSE">
+					<con:mediaType xsi:nil="true"/>
+					<con:status>0</con:status>
+					<con:params/>
+					<con:element>data</con:element>
+				</con:representation>
+				<con:representation type="FAULT">
+					<con:mediaType>text/html; charset=utf-8</con:mediaType>
+					<con:status>500</con:status>
+					<con:params/>
+					<con:element>html</con:element>
+				</con:representation>
+				<con:request name="Consulta AP por id"
+				             id="09ff9380-4c3f-4706-9399-4dc73ed330bc"
+				             mediaType="application/json"
+				             postQueryString="false">
+					<con:settings>
+						<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+					</con:settings>
+					<con:endpoint>http://127.0.0.1:8000</con:endpoint>
+					<con:request>{"id":"51 LEGISLATURA-01"}</con:request>
+					<con:originalUri>http://127.0.0.1/ad/getApid</con:originalUri>
+					<con:credentials>
+						<con:authType>No Authorization</con:authType>
+					</con:credentials>
+					<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+					<con:jmsPropertyConfig/>
+					<con:parameters/>
+				</con:request>
+			</con:method>
+		</con:resource>
+		<con:resource name="getAppag"
+		              path="/ad/getAppag"
+		              id="91ecd4a4-1a7d-492b-8556-1adc9362155a">
+			<con:settings/>
+			<con:parameters/>
+			<con:method name="Method 1"
+			            id="fbfd23a9-014c-41f3-a994-e5b4c1bc7713"
+			            method="POST">
+				<con:settings/>
+				<con:parameters/>
+				<con:representation type="REQUEST">
+					<con:mediaType>application/json</con:mediaType>
+					<con:params/>
+				</con:representation>
+				<con:representation type="RESPONSE">
+					<con:mediaType xsi:nil="true"/>
+					<con:status>0</con:status>
+					<con:params/>
+					<con:element>data</con:element>
+				</con:representation>
+				<con:representation type="RESPONSE">
+					<con:mediaType xsi:nil="true"/>
+					<con:status>0</con:status>
+					<con:params/>
+					<con:element>data</con:element>
+				</con:representation>
+				<con:representation type="RESPONSE">
+					<con:mediaType xsi:nil="true"/>
+					<con:status>0</con:status>
+					<con:params/>
+					<con:element>data</con:element>
+				</con:representation>
+				<con:representation type="RESPONSE">
+					<con:mediaType xsi:nil="true"/>
+					<con:status>0</con:status>
+					<con:params/>
+					<con:element>data</con:element>
+				</con:representation>
+				<con:representation type="RESPONSE">
+					<con:mediaType>application/json</con:mediaType>
+					<con:status>200</con:status>
+					<con:params/>
+					<con:element xmlns:get="http://127.0.0.1/ad/getAppag">get:Response</con:element>
+				</con:representation>
+				<con:request name="Consulta lista de AP paginada"
+				             id="b9a87a1f-8c05-401c-8aca-9a519014c306"
+				             mediaType="application/json"
+				             postQueryString="false">
+					<con:settings>
+						<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+					</con:settings>
+					<con:endpoint>http://127.0.0.1:8000</con:endpoint>
+					<con:request>{"index":1,
+ "size": 15}</con:request>
+					<con:originalUri>http://127.0.0.1/ad/getAppag</con:originalUri>
+					<con:credentials>
+						<con:authType>No Authorization</con:authType>
+					</con:credentials>
+					<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+					<con:jmsPropertyConfig/>
+					<con:parameters/>
+				</con:request>
+				<con:request name="Consulta lista de AP colonia paginada"
+				             id="b9a87a1f-8c05-401c-8aca-9a519014c306"
+				             mediaType="application/json"
+				             postQueryString="false">
+					<con:settings>
+						<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+					</con:settings>
+					<con:endpoint>http://127.0.0.1:8000</con:endpoint>
+					<con:request>{"index":1,
+ "size": 15,
+ "colonia": "BUENAVISTA I"}</con:request>
+					<con:originalUri>http://127.0.0.1/ad/getAppag</con:originalUri>
+					<con:credentials>
+						<con:authType>No Authorization</con:authType>
+					</con:credentials>
+					<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+					<con:jmsPropertyConfig/>
+					<con:parameters/>
+				</con:request>
+			</con:method>
+		</con:resource>
+		<con:resource name="getAppagll"
+		              path="/ad/getAppagll"
+		              id="8a0ac2a2-cccb-4319-856b-2abe3755a8b7">
+			<con:settings/>
+			<con:parameters/>
+			<con:method name="Method 1"
+			            id="9301e811-83fc-48a5-9db6-3b388b251446"
+			            method="POST">
+				<con:settings/>
+				<con:parameters/>
+				<con:representation type="RESPONSE">
+					<con:mediaType xsi:nil="true"/>
+					<con:status>0</con:status>
+					<con:params/>
+					<con:element>data</con:element>
+				</con:representation>
+				<con:representation type="REQUEST">
+					<con:mediaType>application/json</con:mediaType>
+					<con:params/>
+				</con:representation>
+				<con:representation type="RESPONSE">
+					<con:mediaType xsi:nil="true"/>
+					<con:status>0</con:status>
+					<con:params/>
+					<con:element>data</con:element>
+				</con:representation>
+				<con:representation type="RESPONSE">
+					<con:mediaType xsi:nil="true"/>
+					<con:status>0</con:status>
+					<con:params/>
+					<con:element>data</con:element>
+				</con:representation>
+				<con:representation type="FAULT">
+					<con:mediaType>text/html; charset=utf-8</con:mediaType>
+					<con:status>500</con:status>
+					<con:params/>
+					<con:element>html</con:element>
+				</con:representation>
+				<con:representation type="RESPONSE">
+					<con:mediaType xsi:nil="true"/>
+					<con:status>0</con:status>
+					<con:params/>
+					<con:element>data</con:element>
+				</con:representation>
+				<con:representation type="RESPONSE">
+					<con:mediaType xsi:nil="true"/>
+					<con:status>0</con:status>
+					<con:params/>
+					<con:element>data</con:element>
+				</con:representation>
+				<con:representation type="RESPONSE">
+					<con:mediaType xsi:nil="true"/>
+					<con:status>0</con:status>
+					<con:params/>
+					<con:element>data</con:element>
+				</con:representation>
+				<con:representation type="RESPONSE">
+					<con:mediaType xsi:nil="true"/>
+					<con:status>0</con:status>
+					<con:params/>
+					<con:element>data</con:element>
+				</con:representation>
+				<con:representation type="RESPONSE">
+					<con:mediaType xsi:nil="true"/>
+					<con:status>0</con:status>
+					<con:params/>
+					<con:element>data</con:element>
+				</con:representation>
+				<con:representation type="RESPONSE">
+					<con:mediaType xsi:nil="true"/>
+					<con:status>0</con:status>
+					<con:params/>
+					<con:element>data</con:element>
+				</con:representation>
+				<con:representation type="RESPONSE">
+					<con:mediaType xsi:nil="true"/>
+					<con:status>0</con:status>
+					<con:params/>
+					<con:element>data</con:element>
+				</con:representation>
+				<con:representation type="RESPONSE">
+					<con:mediaType xsi:nil="true"/>
+					<con:status>0</con:status>
+					<con:params/>
+					<con:element>data</con:element>
+				</con:representation>
+				<con:representation type="RESPONSE">
+					<con:mediaType xsi:nil="true"/>
+					<con:status>0</con:status>
+					<con:params/>
+					<con:element>data</con:element>
+				</con:representation>
+				<con:representation type="RESPONSE">
+					<con:mediaType>application/json</con:mediaType>
+					<con:status>200</con:status>
+					<con:params/>
+					<con:element xmlns:get="http://127.0.0.1/ad/getAppagll">get:Response</con:element>
+				</con:representation>
+				<con:request name="Consulta paginada dist coordenada"
+				             id="9dcff28d-c693-4e43-8d76-b01c60f3a7a8"
+				             mediaType="application/json"
+				             postQueryString="false">
+					<con:settings>
+						<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+					</con:settings>
+					<con:endpoint>http://127.0.0.1:8000</con:endpoint>
+					<con:request>{"index":1,
+ "size": 2,
+ "latitud": 19.35254,
+ "longitud": -99.01039}</con:request>
+					<con:originalUri>http://127.0.0.1/ad/getAppagll</con:originalUri>
+					<con:credentials>
+						<con:authType>No Authorization</con:authType>
+					</con:credentials>
+					<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+					<con:jmsPropertyConfig/>
+					<con:parameters/>
+				</con:request>
+			</con:method>
+		</con:resource>
+	</con:interface>
+	<con:properties/>
+	<con:wssContainer/>
+	<con:oAuth2ProfileContainer/>
+	<con:oAuth1ProfileContainer/>
+	<con:sensitiveInformation/>
+</con:soapui-project>

@@ -1,0 +1,13 @@
+---
+applications:
+- name: ApiAD_PiplineData_v1.0.0.0
+  memory: 128MB
+  disk_quota: 256MB
+  random-route: true
+  buildpack: python_buildpack
+  services:
+    - ApiAD_PiplineData
+  env:
+      ORACLE_HOME: client
+      LD_LIBRARY_PATH: client
+  command: python main.py
